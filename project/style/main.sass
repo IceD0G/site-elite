@@ -1,0 +1,1528 @@
+@import 'fonts'
+
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  transition: all 0.25s ease
+  outline: none
+
+html
+  background-color: #ffffff
+
+#my-page
+  display: -webkit-box
+  width: 100%
+  height: 100vh
+  overflow-y: hidden
+  overflow-x: hidden
+
+@media (max-width: 768px)
+  #my-page
+    display: block
+    background: #ffffff url(../src/fone.png)no-repeat center center
+    background-size: cover
+.left-menu
+  .left-menu__top
+  .left-menu__center
+    .left-menu__menu
+      .main-menu__list
+        .main-menu__item
+          .pages-counter 
+            background-color: #b36060
+            display: flex
+            justify-content: center
+            text-align: center
+            font-family: 'Open Sans',sans-serif
+            font-size: 12px
+            color: #f0f0f0
+            height: 24px
+            line-height: 24px
+            min-width: 24px
+            position: absolute
+            top: 17px
+            right: 0
+          .pages-counter::after
+            content: ""
+            width: 0
+            height: 0
+            border-bottom: 12px solid #b36060
+            border-left: 8px solid transparent
+            position: absolute
+            left: -8px
+            bottom: 0
+          .pages-counter::before
+            content: ""
+            width: 0
+            height: 0
+            border-top: 12px solid #b36060
+            border-left: 8px solid transparent
+            position: absolute
+            left: -8px
+            top: 0
+
+
+.left-menu
+  width: 310px
+  background: rgb(91, 88, 88) url(../src/background__left-menu.png)no-repeat center center
+  background-size: cover
+  display: flex
+  flex-direction: column
+  .left-menu__top
+    height: 280px
+  .left-menu__center
+    height: 380px
+    .left-menu__menu
+      .main-menu__list
+        .main-menu__item
+          position: relative
+          width: 100%
+          border-bottom: 1px solid rgb(104, 100, 100)
+          padding: 0 35px
+          a
+            font-family: 'Open Sans'
+            font-size: 16px
+            line-height: 60px
+            color: #f7f7f7
+            text-decoration: none
+            text-transform: uppercase
+  .left-menu__bottom
+    padding: 0 35px
+    .left-menu__additional-menu
+      .additional-menu__list
+        margin: 40px 0
+        .additional-menu__item
+          list-style: none
+          a
+            font-family: 'Open Sans'
+            font-size: 16px
+            line-height: 32px
+            color: #bdbdbd
+            text-decoration: none
+    .left-menu__telephone
+      color: #fefefe
+      text-transform: uppercase
+      font-size: 20px
+      font-family: "Open Sans"
+    .left-menu__callback-link
+      a
+        width: 
+        color: #c57c40
+        font-size: 16px
+        font-family: "Open Sans"
+        text-decoration: underline dotted
+        cursor: pointer
+  .left-menu__logo
+    font-family: 'Georgia'
+    font-size: 48px
+    line-height: 15.52px
+    text-transform: uppercase
+    color: #f4f4f4
+    margin: 10px 0 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100px
+    position: relative
+    & img
+      position: absolute
+      top: -15px
+      left: 0
+    .left-menu__sub-logo
+      text-transform: uppercase
+      color: #f5f5f5
+      font-size: 15.17px
+      position: absolute
+      bottom: 5px
+      right: 65px
+  .left-menu__discription
+    width: 80%
+    margin: 0 auto
+    color: #aaa9a9
+    font-size: 16px
+    font-family: 'Open Sans'
+
+.photo
+  position: relative
+  width: 100%
+  .photo__slide
+    width: 100%
+    height: 100%
+    & img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    .photo__oppacity-square-with-text
+      background-color: rgba(45, 38, 30, 0.502)
+      position: absolute
+      z-index: 1
+      left: 60px
+      top: 680px
+      width: 750px
+      height: 137px
+      padding: 10px
+      .photo__oppacity-square-text
+        font-family: 'NotoSans-Regular'
+        text-transform: uppercase
+        font-size: 40px
+        line-height: 56.64px
+        color: #f0f0f0
+      .sub-text
+        font-size: 20px
+    .photo__oppacity-square
+      background-color: rgba(45, 38, 30, 0.302)
+      position: absolute
+      left: 90px
+      top: 710px
+      width: 750px
+      height: 137px
+  .photo__slide-button
+    position: absolute
+    left: 120px
+    top: 795px
+    color: #fefefe
+    font-family: 'Lora'
+    padding: 0 25px
+    font-size: 18px
+    line-height: 14.16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 208px
+    height: 43px
+    background-color: #B36060
+    z-index: 1
+  .photo__slide-button:hover
+    background-color: #864747
+  .photo__slide-button-arrow
+    position: relative
+    span
+      position: absolute
+      top: 50%
+      margin-top: -1px
+      height: 2px
+      left: 50%
+      margin-left: -7.5px
+      width: 20px
+      background-color: #fefefe        
+    span::before,
+    span::after
+      content: ''
+      position: absolute
+      top: 50%
+      margin-top: -1px
+      height: 2px
+      right: 30%
+      margin-right: -8px
+      width: 10px
+      background-color: #fefefe
+    span::before
+      transform: translateY(-5px)
+      transform: rotate(-45deg)
+      transform-origin: right top
+      width: 11px
+    span::after
+      transform: translateY(5px)
+      transform: rotate(45deg)
+      transform-origin: right top
+
+.callback-form
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+  width: 100%
+  height: 100%
+  background-color: rgba(32, 28, 27, 0.929)
+  display: none
+  justify-content: center
+  align-items: center
+  .callback-form__wrapper
+    background-color: rgb(242, 242, 242);
+    width: 930px
+    height: 540px
+    display: flex
+    .callback-form__wrapper-img
+      width: 50%
+      height: 100%
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .callback-form__wrapper-form
+      width: 50%
+      display: flex
+      flex-direction: column
+      margin: 50px 60px 40px
+      position: relative 
+      .form-group__x
+        position: absolute
+        top: -40px
+        right: -40px
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        span,
+        span::before,
+        span::after
+          position: absolute
+          top: 50%
+          right: 50%
+          background-color: #222222
+        span::before,
+        span::after
+          content: ''
+          width: 20px
+          margin-top: -1px
+          margin-right: -10px
+          height: 2px
+        span::before
+          transform: translateY(-5px)
+          transform: rotate(45deg)
+        span::after
+          transform: translateY(5px)
+          transform: rotate(-45deg)
+      legend
+        font-family: 'NotoSans-Regular'
+        font-size: 24px
+        line-height: 24px
+        color: #4a4a4a
+        text-transform: uppercase
+      .form-group
+        font-family: 'Fira Sans'
+        font-size: 14px
+        line-height: 22px
+        color: #716d6d
+        margin-top: 35px
+        input, textarea
+          width: 100%
+          height: 45px
+          border: none
+        input:invalid,
+        textarea:invalid
+          border: 1px solid #ff0000
+      .form-group-btn
+        display: flex
+        justify-content: flex-end
+        .btn
+          margin-top: 30px
+          font-family: 'Lora'
+          font-size: 14px
+          line-height: 18px
+          color: #ffffff
+          padding: 5px
+          width: 215px
+          height: 40px
+          border: none
+          background-color: #db7d3a
+          cursor: pointer
+        .btn:hover
+          font-size: 17px
+
+
+.hamburger,
+.left-menu__hide,
+.left-menu__top-callback-form
+  display: none
+
+@media (max-width: 768px) 
+  .left-menu
+    height: 45px 
+    width: 100%
+    background: rgb(91, 88, 88) url(../src/background__header-menu.png)no-repeat center center
+    background-size: cover
+    position: relative
+    padding: 12px 0
+    .left-menu__top
+      display: flex
+      align-items: center
+      height: 100%
+      padding: 2px 15px
+      .hamburger
+        display: block
+        padding: 0 10px 0 0
+        .hamburger-box
+          position: relative
+        .hamburger-box::after
+          content: ''
+          height: 45px
+          width: 1px
+          background-color: #484747
+          position: absolute
+          top: -8px
+          right: -7px
+        .hamburger-inner, 
+        .hamburger-inner:after, 
+        .hamburger-inner:before
+          background-color: #f4f4f4
+          height: 2px
+          margin: 0
+      .left-menu__logo
+        font-family: 'Georgia'
+        font-size: 28px
+        line-height: 10.36px
+        text-transform: uppercase
+        color: #f4f4f4
+        margin: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        height: inherit
+        position: relative
+        img
+          display: none
+      .left-menu__sub-logo
+        display: none
+  .left-menu__discription
+    display: none
+  .left-menu__top-callback-form
+    display: flex
+    justify-content: flex-end
+    width: 100%
+  .left-menu__menu
+    display: none
+  .left-menu__bottom
+    display: none
+
+    
+  .mm-navbar__title
+    font-family: 'NotoSans-Regular'
+    font-size: 13px
+    text-transform: uppercase
+    color: #4a4a4a !important
+    line-height: 24px
+    padding: 0 0 0 20px
+    display: flex
+    justify-content: flex-start
+    margin: 0 auto
+  .mm-listitem__text
+    text-transform: uppercase
+    color: #6a5346 !important
+    font-size: 13px
+
+  .mm-navbar_sticky 
+    background-color: rgb(223, 221, 216)
+
+  .mm-panel_opened
+    background-color: rgb(236, 234, 230)
+
+@media (max-width: 425px)
+  .mm-navbar__title
+    display: flex
+    justify-content: start
+
+
+@media (max-width: 768px)
+  .left-menu
+    .left-menu__top
+      height: 100%  
+    .left-menu__center
+      height: 0
+      width: 0
+    .left-menu__bottom
+      height: 0
+      width: 0
+
+@media (max-width: 1260px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 60px
+        top: 680px
+        width: 750px
+        height: 137px
+        padding: 10px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 40px
+          line-height: 56.64px
+          color: #f0f0f0
+        .sub-text
+          font-size: 20px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 90px
+        top: 710px
+        width: 750px
+        height: 137px
+    .photo__slide-button
+      position: absolute
+      left: 120px
+      top: 795px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 25px
+      font-size: 18px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 208px
+      height: 43px
+      background-color: #B36060
+      z-index: 1
+      .photo__slide-button-arrow
+        position: relative
+        span
+          position: absolute
+          top: 50%
+          margin-top: -1px
+          height: 2px
+          left: 50%
+          margin-left: -7.5px
+          width: 20px
+          background-color: #fefefe        
+        span::before,
+        span::after
+          content: ''
+          position: absolute
+          top: 50%
+          margin-top: -1px
+          height: 2px
+          right: 30%
+          margin-right: -8px
+          width: 10px
+          background-color: #fefefe
+        span::before
+          transform: translateY(-5px)
+          transform: rotate(-45deg)
+          transform-origin: right top
+          width: 11px
+        span::after
+          transform: translateY(5px)
+          transform: rotate(45deg)
+          transform-origin: right top
+    
+
+@media (max-width: 1024px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 60px
+        top: 680px
+        width: 500px
+        height: 137px
+        padding: 10px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 30px
+          line-height: 56.64px
+          color: #f0f0f0
+        .sub-text
+          font-size: 20px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 90px
+        top: 710px
+        width: 500px
+        height: 137px
+    .photo__slide-button
+      position: absolute
+      left: 90px
+      top: 820px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 25px
+      font-size: 18px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 208px
+      height: 43px
+      background-color: #B36060
+      z-index: 1
+      .photo__slide-button-arrow
+        position: relative
+        span
+          position: absolute
+          top: 50%
+          margin-top: -1px
+          height: 2px
+          left: 50%
+          margin-left: -7.5px
+          width: 20px
+          background-color: #fefefe        
+        span::before,
+        span::after
+          content: ''
+          position: absolute
+          top: 50%
+          margin-top: -1px
+          height: 2px
+          right: 30%
+          margin-right: -8px
+          width: 10px
+          background-color: #fefefe
+        span::before
+          transform: translateY(-5px)
+          transform: rotate(-45deg)
+          transform-origin: right top
+          width: 11px
+        span::after
+          transform: translateY(5px)
+          transform: rotate(45deg)
+          transform-origin: right top
+
+@media (min-width: 769px) 
+  .owl-dots
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 20px
+  .photo .owl-theme .owl-dots .owl-dot span
+    background-color: #ffffff !important
+  .photo .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots span
+    background-color: #ffffff !important
+    width: 11px
+    height: 11px
+
+@media (max-width: 768px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 280px;
+        width: 500px
+        height: 80px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 32px
+          line-height: 37.83px
+          color: #f0f0f0
+        .sub-text
+          font-size: 20px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 300px
+        width: 500px
+        height: 80px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 365px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 30px
+      background-color: #B36060
+      z-index: 1
+      .photo__slide-button-arrow
+        position: relative
+        padding-right: 30px
+        span
+          position: absolute
+          top: 50%
+          margin-top: -0.5px
+          height: 1px
+          left: 50%
+          margin-left: -7.5px
+          width: 20px
+          background-color: #fefefe        
+        span::before,
+        span::after
+          content: ''
+          position: absolute
+          top: 50%
+          margin-top: -0.5px
+          height: 1px
+          right: 40%
+          margin-right: -8px
+          width: 10px
+          background-color: #fefefe
+        span::before
+          transform: translateY(-5px)
+          transform: rotate(-45deg)
+          transform-origin: right top
+          width: 8px
+        span::after
+          transform: translateY(5px)
+          transform: rotate(45deg)
+          transform-origin: right top
+          width: 8px
+  .photo
+    .owl-dots
+      position: absolute
+      bottom: 0
+      left: 0
+      padding: 10px
+      .owl-dot span
+        background-color: #fff
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+    width: 11px
+    height: 11px
+    background-color: #ffffff
+  .content
+    width: 100%
+    height: auto
+    display: none
+  .content h2
+    width: 100%
+    margin: 10px 0
+    text-align: center
+    font-family: 'NotoSans-Regular'
+    text-transform: uppercase
+    position: relative
+  .content h2::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 20%
+    margin-top: -1px
+    margin-left: -10%
+    height: 2px
+    width: 20%
+    background-color: #ede9e6
+  .content h2::after
+    content: ''
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    margin-right: -10%
+    right: 20%
+    height: 2px
+    width: 20%
+    background-color: #ede9e6
+  .content__catalog
+    .content__catalog-slide
+      height: 500px
+      display: flex
+      width: 50%
+      align-items: center
+      position: relative
+      height: 100%
+      padding-left: 10px
+      overflow: hidden
+      img
+        position: relative
+    .content__catalog-slide-on-slide
+      position: absolute
+      top: 20px
+      right: -330px
+      padding: 0 80px
+      border: 4px solid #f3e4d7
+      .content__catalog-slide-on-slide-title
+        text-transform: uppercase
+        font-family: 'NotoSans-Regular'
+        color: #786455
+        padding: 10px 0
+      .content__catalog-slide-on-slide-discripeion
+        color: #7b7777
+        padding-bottom: 15px
+      .content__catalog-slide-on-slide-button
+        padding: 5px 10px
+        font-family: 'Lora'
+        border: 2px solid #e2aa7b
+        color: #938377
+        margin: 0 0 10px 0
+    .owl-dots
+      position: absolute
+      width: 100%
+      .owl-dot.active span
+        width: 14px
+        height: 14px
+        background-color: #db7d3a
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+      width: 11px
+      height: 11px
+      background-color: #000
+
+
+@media (max-width: 630px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 250px
+        width: 500px
+        height: 80px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 32px
+          line-height: 37.83px
+          color: #f0f0f0
+        .sub-text
+          font-size: 20px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 270px
+        width: 500px
+        height: 80px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 335px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 30px
+      background-color: #B36060
+      z-index: 1
+  .content h2::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 15%
+    margin-top: -1px
+    margin-left: -10%
+    height: 2px
+    width: 20%
+    background-color: #ede9e6
+  .content h2::after
+    content: ''
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    margin-left: -10%
+    right: 15%
+    height: 2px
+    width: 20%
+    background-color: #ede9e6
+
+@media (max-width: 590px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 220px
+        width: 500px
+        height: 80px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 32px
+          line-height: 37.83px
+          color: #f0f0f0
+        .sub-text
+          font-size: 20px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 240px
+        width: 500px
+        height: 80px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 305px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 30px
+      background-color: #B36060
+      z-index: 1
+
+@media (max-width: 590px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 220px
+        width: 500px
+        height: 80px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 32px
+          line-height: 37.83px
+          color: #f0f0f0
+        .sub-text
+          font-size: 20px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 240px
+        width: 500px
+        height: 80px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 305px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 30px
+      background-color: #B36060
+      z-index: 1
+
+@media (max-width: 540px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 190px
+        width: 400px
+        height: 80px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 22px
+          line-height: 37.83px
+          color: #f0f0f0
+        .sub-text
+          font-size: 15px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 210px
+        width: 400px
+        height: 80px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 275px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 30px
+      background-color: #B36060
+      z-index: 1
+
+@media (max-width: 490px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 160px
+        width: 400px
+        height: 80px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 22px
+          line-height: 37.83px
+          color: #f0f0f0
+        .sub-text
+          font-size: 15px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 180px
+        width: 400px
+        height: 80px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 245px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 30px
+      background-color: #B36060
+      z-index: 1
+  .content h2::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 10%
+    margin-top: -1px
+    margin-left: -7.5%
+    height: 2px
+    width: 15%
+    background-color: #ede9e6
+  .content h2::after
+    content: ''
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    margin-left: -7.5%
+    right: 10%
+    height: 2px
+    width: 15%
+    background-color: #ede9e6
+
+@media (max-width: 425px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 130px
+        width: 400px
+        height: 80px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 22px
+          line-height: 37.83px
+          color: #f0f0f0
+        .sub-text
+          font-size: 15px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 150px
+        width: 400px
+        height: 80px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 215px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 30px
+      background-color: #B36060
+      z-index: 1
+
+@media (max-width: 375px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 100px
+        width: 250px
+        height: 60px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 15px
+          line-height: 28px
+          color: #f0f0f0
+        .sub-text
+          font-size: 10px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 120px
+        width: 250px
+        height: 60px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 185px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 25px
+      background-color: #B36060
+      z-index: 1
+  .content h2::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 5%
+    margin-top: -1px
+    margin-left: -7.5%
+    height: 2px
+    width: 15%
+    background-color: #ede9e6
+  .content h2::after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 5%
+    margin-top: -1px
+    margin-left: -7.5%
+    right: 10%
+    height: 2px
+    width: 15%
+    background-color: #ede9e6
+
+@media (max-width: 325px)
+  .photo
+    position: relative
+    width: 100%
+    .photo__slide
+      width: 100%
+      height: 100%
+      position: relative
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .photo__oppacity-square-with-text
+        background-color: rgba(45, 38, 30, 0.502)
+        position: absolute
+        z-index: 1
+        left: 25px
+        top: 90px
+        width: 200px
+        height: 50px
+        padding: 5px
+        .photo__oppacity-square-text
+          font-family: 'NotoSans-Regular'
+          text-transform: uppercase
+          font-size: 13px
+          line-height: 23px
+          color: #f0f0f0
+        .sub-text
+          font-size: 10px
+      .photo__oppacity-square
+        background-color: rgba(45, 38, 30, 0.302)
+        position: absolute
+        left: 40px
+        top: 110px
+        width: 200px
+        height: 50px
+    .photo__slide-button
+      position: absolute
+      left: 40px
+      top: 155px
+      color: #fefefe
+      font-family: 'Lora'
+      padding: 0 12px
+      font-size: 12px
+      line-height: 14.16px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 140px
+      height: 20px
+      background-color: #B36060
+      z-index: 1
+
+@media (max-width: 950px)
+  .callback-form
+    .callback-form__wrapper
+      width: 730px
+      height: 400px
+      .callback-form__wrapper-form
+        margin: 25px 30px 20px
+        .form-group
+          margin-top: 15px
+        .form-group__x
+          position: absolute
+          top: -20px
+          right: -20px
+
+
+
+
+@media (max-width: 768px)
+  .callback-form
+    .callback-form__wrapper
+      width: 600px
+      height: 350px
+      .callback-form__wrapper-form
+        margin: 20px 
+        .form-group
+          margin-top: 10px
+          input, textarea
+            height: 35px
+            border: none
+        .form-group__x
+          position: absolute
+          top: -10px
+          right: -10px
+
+@media (max-width: 600px)
+  .callback-form
+    .callback-form__wrapper
+      width: 500px
+      height: 300px
+      .callback-form__wrapper-form
+        margin: 20px 
+        .form-group
+          margin-top: 10px
+          input, textarea
+            height: 30px
+        .form-group__x
+          position: absolute
+          top: -10px
+          right: -10px
+        .form-group-btn
+          display: flex
+          justify-content: flex-end
+          .btn
+            margin-top: 15px
+            padding: 5px
+            width: 215px
+            height: 40px
+
+@media (max-width: 500px)
+  .callback-form
+    .callback-form__wrapper
+      width: 400px
+      height: 300px
+      .callback-form__wrapper-form
+        margin: 10px 
+        .form-group
+          margin-top: 10px
+          input, textarea
+            height: 20px
+        .form-group__x
+          position: absolute
+          top: -10px
+          right: -10px
+        .form-group-btn
+          display: flex
+          justify-content: flex-end
+          .btn
+            margin-top: 15px
+            padding: 5px
+            width: 215px
+            height: 40px
+
+@media (max-width: 425px)
+  .callback-form
+    .callback-form__wrapper
+      width: 300px
+      height: 300px
+      .callback-form__wrapper-form
+        margin: 10px 
+        .form-group
+          margin-top: 10px
+          input, textarea
+            height: 20px
+        .form-group__x
+          position: absolute
+          top: -10px
+          right: -10px
+        .form-group-btn
+          display: flex
+          justify-content: flex-end
+          .btn
+            margin-top: 15px
+            padding: 5px
+            width: 215px
+            height: 40px
+
+.mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened~.mm-slideout
+  transform: translate3d(200px, 0, 0)
+
+.mm-menu_offcanvas
+  width: 200px
+  min-width: 200px
+  max-width: 440px
+
+.show
+  display: block
+
+.show_success
+  display: flex !important
+
+.callback-form__wrapper-form-success
+  display: none
+  justify-content: center
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  background-color: rgba(32, 28, 27, 0.929)
+  .callback-form__wrapper-form-success-wrapper
+    margin-top: 50px
+    position: absolute
+    display: flex
+    background-color: rgb(242, 242, 242);
+    width: 930px
+    height: 295px
+    display: flex
+    .callback-form__wrapper-form-success-img
+      width: 50%
+      height: 100%
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .callback-form__wrapper-form-success-message
+      width: 50%
+      height: 100%
+      padding: 50px
+      text-align-last: left
+      .callback-form__wrapper-form-success-message-title
+        font-family: 'NotoSans-Regular'
+        font-size: 24px
+        line-height: 36px
+        color: #4a4a4a
+        margin-bottom: 50px
+      .callback-form__wrapper-form-success-message-discription
+        font-family: 'Fira Sans'
+        color: #716d6d
+        font-size: 14px
+        line-height: 22px
+        margin-bottom: 30px
+      .callback-form__wrapper-form-success-message-button
+        font-family: 'Lora'
+        font-size: 13.8px
+        line-height: 45px
+        color: #806d5f
+        text-decoration: underline
+        cursor: pointer
+  .form-group__x
+    position: absolute
+    top: 20px
+    right: 20px
+    width: 40px
+    height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    span,
+    span::before,
+    span::after
+      position: absolute
+      top: 50%
+      right: 50%
+      background-color: #222222
+    span::before,
+    span::after
+      content: ''
+      width: 20px
+      margin-top: -1px
+      margin-right: -10px
+      height: 2px
+    span::before
+      transform: translateY(-5px)
+      transform: rotate(45deg)
+    span::after
+      transform: translateY(5px)
+      transform: rotate(-45deg)
+
+@media (max-width: 950px)
+  .callback-form__wrapper-form-success
+    .callback-form__wrapper-form-success-wrapper
+      width: 730px
+@media (max-width: 768px)
+  .callback-form__wrapper-form-success
+    .callback-form__wrapper-form-success-wrapper
+      width: 600px
+      .callback-form__wrapper-form-success-message
+        padding: 40px
+        .callback-form__wrapper-form-success-message-title
+          font-family: 'NotoSans-Regular'
+          font-size: 20px
+          line-height: 30px
+          color: #4a4a4a
+          margin-bottom: 30px
+        .callback-form__wrapper-form-success-message-discription
+          font-family: 'Fira Sans'
+          color: #716d6d
+          font-size: 14px
+          line-height: 22px
+          margin-bottom: 20px
+        .callback-form__wrapper-form-success-message-button
+          font-family: 'Lora'
+          font-size: 13.8px
+          line-height: 45px
+          color: #806d5f
+          text-decoration: underline
+          cursor: pointer
+@media (max-width: 600px)
+  .callback-form__wrapper-form-success
+    .callback-form__wrapper-form-success-wrapper
+      width: 500px
+@media (max-width: 500px)
+  .callback-form__wrapper-form-success
+    .callback-form__wrapper-form-success-wrapper
+      width: 400px
+      .callback-form__wrapper-form-success-message
+        padding: 20px
+        .callback-form__wrapper-form-success-message-title
+          font-family: 'NotoSans-Regular'
+          font-size: 20px
+          line-height: 30px
+          color: #4a4a4a
+          margin-bottom: 10px
+        .callback-form__wrapper-form-success-message-discription
+          font-family: 'Fira Sans'
+          color: #716d6d
+          font-size: 14px
+          line-height: 22px
+          margin-bottom: 20px
+        .callback-form__wrapper-form-success-message-button
+          font-family: 'Lora'
+          font-size: 13.8px
+          line-height: 45px
+          color: #806d5f
+          text-decoration: underline
+          cursor: pointer
+@media (max-width: 425px)
+  .callback-form__wrapper-form-success
+    .callback-form__wrapper-form-success-wrapper
+      width: 300px
